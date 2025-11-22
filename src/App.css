@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base reset for the range input */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+  }
+  
+  /* WebKit track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 170%;
+    border-radius: 999px;
+    background: transparent;
+  }
+  
+  /* Firefox track */
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    border-radius: 999px;
+    background: transparent;
+  }
+  
+  /* Thumb: black + green glow (always on) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #111;
+    border: 2px solid #333;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.7);
+    cursor: pointer;
+    margin-top: -5px; /* tweak for vertical slider alignment */
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 18px rgb(0, 255, 8);
+  }
+  
+  /* Firefox thumb */
+  input[type="range"]::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #111;
+    border: 2px solid #333;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.7);
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.95);
+  }
